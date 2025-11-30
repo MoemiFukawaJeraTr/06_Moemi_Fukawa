@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="stylesheet" href="style.css">
+  <title>立替払い管理アプリ</title>
+</head>
+
+<body>
+
+  <h1>立替払い管理アプリ</h1>
+  <div id="step">
+    <h2>STEP1：メンバーを追加する</h2>
+    <div>参加するメンバーを入力して「登録」してください</div>
+    <input type="text" id="memberList" placeholder="(例)やまだ,さとう,たなか">
+    <button id="memberSubmit">登録</button>
+  </div>
+
+  <div id="step">
+    <h2>STEP2：買い物履歴を追加する</h2>
+    <label>支払者：
+      <select id="payer" ondblclick="createOption()">
+      </select>
+    </label>
+    <label>買い物内容：<input type="text" id="shopping"></label>
+    <label>金額：</label><input type="number" id="amount"></label>
+    <button id="shoppingSubmit">追加</button>
+
+    <table>
+      <tr>
+        <th>支払者</th>
+        <th>買い物内容</th>
+        <th>金額</th>
+      </tr>
+    </table>
+  </div>
+
+  <div id="step">
+    <h2>STEP3：清算する</h2>
+    <button id="submitCaluc">実行</button>
+    <div id="matchingResult">
+      <p>メンバーの支払総額です</p>
+      <ul id="paymentTotalList"></ul>
+
+      <p>以下のやり取りで清算可能です</p>
+      <ul id="paymentMatching"></ul>
+    </div>
+  </div>
+ 
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+
+
